@@ -1,0 +1,195 @@
+.header-background {
+    background-color: var(--primary-color);
+    border-bottom: 2px solid var(--secondary-color);
+    box-shadow: 0 0 0 15px var(--shadow-color-light), 0 0 0 7px var(--shadow-color);
+
+    position: relative;
+    width: 100vw;
+    left: 50%;
+    right: 50%;
+
+    margin-left: -50vw;
+    margin-right: -50vw;
+
+    z-index: 2;
+}
+
+.restaurant-header {
+    display: flex;
+    justify-content: space-between;
+
+    max-width: 1300px;
+    height: 100%;
+
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.restaurant-logo {
+    font-family: 'Inter', sans-serif;
+    font-size: var(--xlarge-font-size);
+    font-weight: 900;
+
+    padding: 1rem;
+}
+
+.restaurant-navigation {
+    display: flex;
+} 
+
+.restaurant-navigation ul.desktop-view-navigation {
+    display: flex;
+    justify-content: space-between;
+
+    border-left: 2px solid var(--secondary-color);
+}
+
+.restaurant-navigation ul.desktop-view-navigation li a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+
+    height: 100%;
+    padding: 1rem;
+
+    font-family: 'Inter', sans-serif;
+    font-size: var(--medium-font-size);
+    font-weight: 600;
+    color: var(--text-color-secondary);
+
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+}
+
+.restaurant-navigation ul.desktop-view-navigation li a:hover {
+    background-color: var(--primary-color-hover-light);
+}
+
+.restaurant-navigation .mobile-view-navigation-wrapper, .mobile-toggle-menu {
+    display: none;
+}
+
+/* Tablet-Mobile Novaigation */
+@media (max-width: 768px) {
+    .restaurant-navigation ul.desktop-view-navigation {
+        display: none;
+    }
+
+    .header-background {
+        position: sticky; /* Adjust menu position if the header is not fixed at top */
+        top: 0;
+        z-index: 2;
+        margin: 0;
+
+        overflow: hidden;
+        width: 100vw;
+    }
+
+    .mobile-toggle-menu {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    
+        padding: 0 1rem 0 1rem;
+    }
+    
+    .mobile-toggle-menu svg {
+        stroke: var(--text-color-secondary);
+        stroke-width: 2px;
+        fill: none;
+
+        border: 2px solid var(--secondary-color);
+        background-color: var(--accent-color);
+    }
+
+    .mobile-toggle-menu svg:active {
+        background-color: var(--accent-color-active);
+    }
+
+    .restaurant-navigation .mobile-view-navigation-wrapper {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        right: 0;
+
+        width: 50vw;
+        height: 100vh;
+
+        display: block;
+
+        background-color: var(--primary-color);
+        border-left: 2px solid var(--secondary-color);
+        box-shadow: -30px 0 0 0px var(--shadow-color-light), -15px 0 0 0px var(--shadow-color), -5px 0 0 0 var(--shadow-color);
+
+        z-index: 3;
+
+        overflow: hidden;
+
+        transition: all 0.8s ease;
+    }
+
+    .restaurant-navigation .mobile-view-navigation-wrapper[data-status='false'] {
+        right: -100%;
+     }
+ 
+     .restaurant-navigation .mobile-view-navigation-wrapper[data-status='true'] {
+         right: 0vw;
+     }
+
+     .mobile-close-wrapper {
+        display: flex;
+        justify-content: end;
+
+        padding: 1rem;
+        width: 100%;
+     }
+
+     .mobile-close-wrapper .mobile-close-toggle {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        padding: 0.5rem;
+
+        background-color: var(--accent-color);
+        border: 2px solid var(--secondary-color);
+    }
+
+    .mobile-close-wrapper .mobile-close-toggle svg {
+        stroke: var(--text-color-secondary);
+    }
+
+    .mobile-close-wrapper .mobile-close-toggle svg path {
+        fill: var(--text-color-secondary);
+    }
+
+    .restaurant-navigation ul.mobile-view-navigation {
+        padding: min(30vh, 2rem) 2rem;
+
+        display: flex;
+        flex-direction: column;
+    }
+
+    .restaurant-navigation ul.mobile-view-navigation li {
+        padding-top: 0.5rem;
+    }
+
+    .restaurant-navigation ul.mobile-view-navigation li a {
+        display: flex;
+
+        font-family: 'Inter', sans-serif;
+        font-size: var(--medium-font-size);
+        font-weight: 600;
+        color: var(--text-color-secondary);
+
+        padding: 1rem;
+
+        transition: all 0.3s ease;
+    }
+
+    .restaurant-navigation ul.mobile-view-navigation li a:hover {
+        background-color: var(--primary-color-hover-light);
+    }
+}

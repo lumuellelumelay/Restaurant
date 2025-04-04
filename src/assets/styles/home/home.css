@@ -1,0 +1,5 @@
+/** this file compiles the styles of each sections of home.js **/
+@import './hero_banner.css';
+@import './special_section.css';
+@import './whats_new.css';
+@import './newsletter.css';

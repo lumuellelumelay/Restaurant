@@ -1,0 +1,54 @@
+/** setting up the font family **/
+@import '../fonts/web/inter.css';
+
+*, *::after, *::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+:root {
+    font-family: 'Inter', sans-serif;
+
+    --background-color: #FFF0DC;
+
+    --primary-color: #F0BB78;
+    --primary-color-hover: #c09660;
+    --primary-color-hover-light: #c0966070;
+
+    --secondary-color: #543A14;
+    --secondary-color-hover: #766143;
+
+    --accent-color: #95a690;
+    --accent-color-active: #778573;
+    --accent-color-light: #bfcabc;
+
+    --text-color: #131010;
+    --text-color-secondary: #2b2828;
+    --text-color-tertiary: #424040;
+    --text-color-light: #FFF0DC;
+
+    --shadow-color: rgba(84, 58, 20, 0.2);
+    --shadow-color-light: rgba(84, 58, 20, 0.1);
+
+    --banner-title-size: 2.986rem;
+    --banner-subtitle-size: 2.488rem;
+
+    --title-font-size: 2.074rem;
+    --subtitle-font-size: 1.728rem;
+
+    --xlarge-font-size: 1.44rem;
+    --large-font-size: 1.2rem;
+    --medium-font-size: 1rem;
+    --small-font-size: 0.833rem;
+    --xsmall-font-size: 0.694rem;
+}
+
+@supports (font-variation-settings: normal) {
+    :root {
+        font-family: 'InterVariable', sans-serif;
+        font-optical-sizing: auto;
+    }
+}

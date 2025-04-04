@@ -1,0 +1,120 @@
+.whats-new {
+    background-color: var(--primary-color);
+
+    position: relative;
+    width: 100vw;
+
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+
+    padding: 5rem 0.5rem 5rem 0.5rem;
+}
+
+.whats-new p.title {
+    font-family: 'Inter', sans-serif;
+    font-size: var(--banner-subtitle-size);
+    -webkit-text-stroke: 3px var(--text-color);
+    letter-spacing: 6%;
+    font-weight: 900;
+    
+    color: var(--text-color-light);
+    paint-order: stroke fill;
+
+    padding: 0.5rem 0.5rem 2.5rem 0.5rem;
+    text-align: center;
+}
+
+.whats-new .whats-new-content {
+    padding: 1rem;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    grid-auto-rows: min-content; /* incase if I want to add more cards*/
+    gap: 2rem;
+
+    justify-items: center;
+    align-items: center;
+}
+
+.whats-new-card {
+    background-color: var(--background-color);
+    border: 2px solid var(--secondary-color);
+    padding: 1rem;
+
+    height: auto;
+    width: 20rem;
+
+    box-shadow: 0 0 0 5px var(--shadow-color);
+}
+
+.whats-new-card .top-section {
+    height: 16rem;
+    width: 100%;
+    background-color: rgba(15, 15, 15, 0.9);
+}
+
+.whats-new-card .top-section img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    opacity: 0.8;
+
+    box-shadow: 0 0 0 3px var(--shadow-color);
+}
+
+.whats-new-card .bottom-section {
+    padding-top: 0.5rem;
+}
+
+.whats-new-card .bottom-section .top-description p.subtitle {
+    text-align: center;
+    
+    font-weight: 900;
+    color: var(--secondary-color);
+}
+
+.whats-new-card .bottom-section .bottom-description {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.whats-new-card .bottom-section .bottom-description p.description {
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+    width: 90%;
+
+    font-size: var(--medium-font-size);
+    text-align: center;
+}
+
+.whats-new-card .bottom-section .bottom-description button.gen-button {
+    padding: 1rem 2rem;
+    position: relative;
+    top: 0;
+
+    background-color: var(--secondary-color);
+    border: none;
+
+    box-shadow: 0 0 0 3px var(--shadow-color);
+    
+    font-family: 'Inter', sans-serif;
+    font-size: var(--small-font-size);
+    font-weight: 600;
+    color: var(--text-color-light);
+
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.whats-new-card .bottom-section .bottom-description button.gen-button:hover {
+    background-color: var(--secondary-color-hover);
+    color: var(--text-color-light);
+
+    box-shadow: 0 0 0 5px var(--shadow-color), 0 0 0 2px var(--shadow-color);
+    top: -3px;
+}

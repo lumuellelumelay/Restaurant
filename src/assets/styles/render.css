@@ -1,0 +1,25 @@
+@import './root.css';
+@import './header.css';
+@import './footer.css';
+
+/** home page styles **/
+@import './home/home.css';
+
+/** about page styles **/
+@import './about.css';
+
+body {
+    background-color: var(--background-color);
+}
+
+.hero-page-restaurant-container {
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.hero-main-page-content-wrapper {
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+/* menu-main-page-content-wrapper */
